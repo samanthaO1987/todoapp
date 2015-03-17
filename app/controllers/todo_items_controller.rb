@@ -1,6 +1,6 @@
 class TodoItemsController < ApplicationController
-  before_action :set_todo_list
-  before_action :set_todo_item, except: [:create]
+  before_action :get_todo_list
+  before_action :get_todo_item, except: [:create]
 
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
@@ -23,11 +23,11 @@ class TodoItemsController < ApplicationController
 
   private
 
-  def set_todo_list
+  def get_todo_list
     @todo_list = TodoList.find(params[:todo_list_id])
   end
 
-  def set_todo_item
+  def get_todo_item
     @todo_item = @todo_list.todo_items.find(params[:id])
   end
 

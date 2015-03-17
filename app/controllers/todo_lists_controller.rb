@@ -1,5 +1,5 @@
 class TodoListsController < ApplicationController
-  before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
+  before_action :get_todo_list, only: [:show, :edit, :update, :destroy]
 
   # GET /todo_lists
   # GET /todo_lists.json
@@ -63,7 +63,7 @@ class TodoListsController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_todo_list
+  def get_todo_list
     @todo_list = TodoList.find(params[:id])
   end
 
