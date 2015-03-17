@@ -47,7 +47,7 @@ class TodoListsController < ApplicationController
   end
 
   private
-  def set_todo_list
+  def get_todo_list
     @todo_list = TodoList.find(params[:id])
   end
 
