@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyString
+complete:
+  content: "Get the job at Zilverline"
+  completed_at: "2015-01-01 00:00:00"
+  todo_list: one
 
-two:
-  content: MyString
+incomplete:
+  content: "Polish todo app"
+  todo_list: two

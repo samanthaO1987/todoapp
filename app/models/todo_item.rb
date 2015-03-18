@@ -4,4 +4,12 @@ class TodoItem < ActiveRecord::Base
   def completed?
     completed_at.present?
   end
+
+  def completed!
+    update_column(:completed_at, Time.now)
+  end
+
+  def revert!
+    update_column(:completed_at, nil)
+  end
 end
